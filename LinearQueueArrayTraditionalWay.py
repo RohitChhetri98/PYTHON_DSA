@@ -1,4 +1,21 @@
-## LINEAR QUEUE IMPLEMENTATION USING ARRAY IN PYTHON DSA (TRADITIONAL WAY) ##
+###########################################################################################################################
+#            # LINEAR QUEUE IMPLEMENTATION USING ARRAY IN PYTHON DSA (TRADITIONAL WAY) ##                                 #
+# Linear Queue is a FIFO (First In First Out Data Structure.                                                              #
+# This program demonstrates how the linear queue is implemented traditionally.                                            #
+# The code length can be reduced using the append and pop built-in list methods.                                          #
+# ------------------------------------------------------------------------------------------------------------------      #
+#     The limitations of this approach are:                                                                               #
+# 1. Fixed size of the queue.                                                                                             #
+# 2. In case rear reaches Max-1 and front is not at 0 (greater than 0), even though there is available space, the queue   #
+#     is full.                                                                                                            #
+# 3. In such case, insertion is restart only after deleting all the elements.                                             #
+#---------------------------------------------------------------------------------------------------------------------    #
+#    Solutions:                                                                                                           #
+# 1. Use append and pop built-in list methods to avoid building logic manually.                                           #
+# 2. Using no MAX value removes the size limitation and the queue can store more data dynamically.                        #
+# 3. Use Circular queue to avoid having to empty the queue if rear=MAX-1 and front > 0.                                   #
+###########################################################################################################################
+
 class Queue:
     def __init__(self, MAX):
         self.MAX = MAX
