@@ -9,7 +9,7 @@ class Queue:
     def enqueue(self, data):
         if(self.rear < self.MAX-1):
             self.rear += 1
-            self.queue.append(data)
+            self.queue.insert(self.rear, data)
             if(self.front == -1):
                 self.front = 0
             print("Inserted: ", self.queue[self.rear])
